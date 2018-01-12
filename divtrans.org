@@ -1,4 +1,4 @@
-* DIVTRANS 							   :Muchardt:
+* DIVTRANS							   :Muchardt:
   
   We look at the implication of HERV sequences in the reactivation of
   immune related genes.
@@ -63,16 +63,23 @@ explore a possible enrichment in HERVs sequences within enhancers
 modified by the disease.
 
 
-** Analysis
 *** Divergent transcription identification
-**** TODO [#A] 0.1
+**** DONE [#A] 0.1
+     CLOSED: [2018-01-10 Wed 16:13]
     Using divtrans pipeline
 
     http://localhost:8888/notebooks/hub/divtrans/code/11.1_Divtrans_Ribo-minus.ipynb
 
     Improvements:
     - [ ] Identify the center of divergent transcription event and
-      create a window of 500bp centered on it
+      create shortest interval between divergent reads
+
+**** TODO [#A] 0.2
+     DEADLINE: <2018-01-12 Fri>
+
+     - [ ] Verify that overlapping read pairs are considered
+
+     - [ ] Add all sites of divergent transcription (ie overlapping reads)
 
 **** TODO [#B] 0.2								     
 
@@ -92,8 +99,21 @@ modified by the disease.
 
 
 
-   
 ** Data
+*** Ribominus data
+
+#+BEGIN_SRC sh
+  cd  /home/ekornobis/data/muchardt/seqherv/data_11_2017
+  pyNextGen.py *fq.gz
+#+END_SRC
+
+#+RESULTS:
+| FileName            |  Nreads(M) |  Nbases(G) |      Ns | MinLen | MaxLen | MeanLen | StdevLen |         MeanGC |
+| Compoud_A_1_1.fq.gz | 106.917918 | 16.0376877 | 1740681 |    150 |    150 |   150.0 |      0.0 | 0.504873103247 |
+| Compoud_A_1_2.fq.gz | 106.917918 | 16.0376877 | 3510740 |    150 |    150 |   150.0 |      0.0 | 0.512369123262 |
+| VEUDE_A_1_1.fq.gz   | 111.018276 | 16.6527414 | 1788598 |    150 |    150 |   150.0 |      0.0 | 0.519798430666 |
+| VEUDE_A_1_2.fq.gz   | 111.018276 | 16.6527414 | 3601731 |    150 |    150 |   150.0 |      0.0 |  0.52754046556 |
+
 *** Regions of interest 
 Comparing CompoundA and Veude:
 
