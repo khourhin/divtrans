@@ -63,8 +63,8 @@ explore a possible enrichment in HERVs sequences within enhancers
 modified by the disease.
 
 
-*** Divergent transcription identification
-**** DONE [#A] 0.1
+** Divergent transcription identification
+*** DONE [#A] 0.1
      CLOSED: [2018-01-10 Wed 16:13]
     Using divtrans pipeline
 
@@ -74,14 +74,22 @@ modified by the disease.
     - [ ] Identify the center of divergent transcription event and
       create shortest interval between divergent reads
 
-**** TODO [#A] 0.2
-     DEADLINE: <2018-01-12 Fri>
+*** DONE [#A] 0.2
+     CLOSED: [2018-01-12 Fri 12:21] DEADLINE: <2018-01-12 Fri>
 
-     - [ ] Verify that overlapping read pairs are considered
+     - [X] Verify that overlapping read pairs are considered
 
-     - [ ] Add all sites of divergent transcription (ie overlapping reads)
+     - [X] Add all sites of divergent transcription (ie overlapping reads)
 
-**** TODO [#B] 0.2								     
+*** TODO [#A] 0.3
+    DEADLINE: <2018-01-26 Fri>
+
+     - [X] Provide with the interval in between divergent reads (not the min and max of both fragments)
+
+     - [ ] Identify divergent transcription at the fragment (and not
+       merged fragments) level.
+
+*** TODO [#B] 0.2								     
 
      Checking available solutions (Found in cite:Lilam2014 ):
      
