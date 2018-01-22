@@ -1,0 +1,3 @@
+[submodule "code/pyNextGen"]
+	path = code/pyNextGen
+	url = git@gitlab.com:khourhin/pyNextGen.git
