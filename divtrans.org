@@ -102,11 +102,12 @@ modified by the disease.
 
        Designed for GRO-seq but might be of use with our
        totalRNA dataset
+
+*** TODO 1.0
+
+    - [ ] Make a user friendly interface
             
 ** Current workflow
-
-
-
 ** Data
 *** Ribominus data
 
