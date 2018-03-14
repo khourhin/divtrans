@@ -81,12 +81,18 @@
       - [X] Add all sites of divergent transcription (ie overlapping reads)
 
 *** TODO [#B] 0.3
-     DEADLINE: <2018-02-09 Fri>
+    DEADLINE: <2018-03-16 Fri>
 
      - [X] Provide with the interval in between divergent reads (not the min and max of both fragments)
 
      - [ ] Identify divergent transcription at the fragment (and not
        merged fragments) level.
+
+       IDEA: THIS SHOULD BE ACTUALLY PRETTY EASY: Use sorted BAMS and
+       for each read in - direction, look for a read downstream (in
+       bam coordinate sorted file it will be further down in the file)
+       on the + strand until a certain threshold. Then pass to the
+       next read in - direction, etc...
 
 *** TODO [#B] 0.2								     
 
