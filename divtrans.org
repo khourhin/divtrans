@@ -81,7 +81,7 @@
       - [X] Add all sites of divergent transcription (ie overlapping reads)
 
 *** TODO [#B] 0.3
-     DEADLINE: <2018-02-09 Fri>
+     DEADLINE: <2018-04-13 ven.>
 
      - [X] Provide with the interval in between divergent reads (not the min and max of both fragments)
 
