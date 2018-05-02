@@ -81,9 +81,16 @@
       - [X] Add all sites of divergent transcription (ie overlapping reads)
 
 *** TODO [#B] 0.3
-     DEADLINE: <2018-04-13 ven.>
+    DEADLINE: <2018-05-04 ven.>
+     :LOGBOOK:
+     CLOCK: [2018-05-02 mer. 11:26]--[2018-05-02 mer. 13:19] =>  1:53
+     CLOCK: [2018-04-12 jeu. 12:53]--[2018-04-12 jeu. 16:35] =>  3:42
+     CLOCK: [2018-04-12 jeu. 09:51]--[2018-04-12 jeu. 12:00] =>  2:09
+     :END:
 
      - [X] Provide with the interval in between divergent reads (not the min and max of both fragments)
+
+     - [X] Transfer to tars and tesla
 
      - [ ] Identify divergent transcription at the fragment (and not
        merged fragments) level.
