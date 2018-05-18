@@ -106,7 +106,7 @@ f
 *** TODO [#B] 0.4
     DEADLINE: <2018-05-25 ven.>
 
-    1) [ ] Check quality of prediction by intersecting divergent
+    1) [X] Check quality of prediction by intersecting divergent
        transcription beds with CAGE fantom datasets
 
     2) [ ] Evaluate + and - transcription on/around divergent
@@ -115,6 +115,7 @@ f
 
     3) [ ] Adjust +/- transcriptuion ratio threshold according to
        quality of prediction using method in 1)
+       > by optimizing the jaccard index ?
 
 
 *** TODO [#B] 0.2								     
