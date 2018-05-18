@@ -72,7 +72,7 @@
      Improvements:
      - [ ] Identify the center of divergent transcription event and
        create shortest interval between divergent reads
-
+f
 *** DONE [#A] 0.2
       CLOSED: [2018-01-12 Fri 12:21] DEADLINE: <2018-01-12 Fri>
 
@@ -80,8 +80,8 @@
 
       - [X] Add all sites of divergent transcription (ie overlapping reads)
 
-*** TODO [#B] 0.3
-    DEADLINE: <2018-05-04 ven.>
+*** DONE [#B] 0.3
+    CLOSED: [2018-05-18 ven. 10:37] DEADLINE: <2018-05-18 ven.>
      :LOGBOOK:
      CLOCK: [2018-05-02 mer. 11:26]--[2018-05-02 mer. 13:19] =>  1:53
      CLOCK: [2018-04-12 jeu. 12:53]--[2018-04-12 jeu. 16:35] =>  3:42
@@ -92,7 +92,7 @@
 
      - [X] Transfer to tars and tesla
 
-     - [ ] Identify divergent transcription at the fragment (and not
+     - [X] Identify divergent transcription at the read level (and not
        merged fragments) level.
 
        IDEA: THIS SHOULD BE ACTUALLY PRETTY EASY: Use sorted BAMS and
@@ -100,6 +100,22 @@
        bam coordinate sorted file it will be further down in the file)
        on the + strand until a certain threshold. Then pass to the
        next read in - direction, etc...
+
+     - [X] Stats on beds
+
+*** TODO [#B] 0.4
+    DEADLINE: <2018-05-25 ven.>
+
+    1) [ ] Check quality of prediction by intersecting divergent
+       transcription beds with CAGE fantom datasets
+
+    2) [ ] Evaluate + and - transcription on/around divergent
+       transcription intervals. Might put a threshold on the
+       ratio of +/- transcription
+
+    3) [ ] Adjust +/- transcriptuion ratio threshold according to
+       quality of prediction using method in 1)
+
 
 *** TODO [#B] 0.2								     
 

@@ -14,6 +14,7 @@ class Oread(object):
         read orientation from a pysam alignment"""
 
         blocks = ali_read.get_blocks()
+        self.chro = ali_read.reference_name
         self.start = blocks[0][0]
         self.end = blocks[-1][-1]
 
@@ -27,9 +28,10 @@ class Oread(object):
             raise(IOError('Check loop !'))
 
     def __repr__(self):
-        return "<Oread object: {ori}:{start}-{end}>".format(ori=self.orientation,
-                                                           start=self.start,
-                                                           end=self.end)
+        return "<Oread object: {chro}:{start}-{end} ({ori})>".format(chro=self.chro,
+                                                                   start=self.start,
+                                                                   end=self.end,
+                                                                   ori=self.orientation)
 
 def get_oriented_reads(bam):
     """To investigate the orientation of the transcription accross an alignment.
@@ -50,7 +52,7 @@ def get_oriented_reads(bam):
             
 def identify_divergent_transcription(oread_gen, distance=100):
     """From a generator from get_transcription_strands, identify sites of
-    divergent transcription. 
+    divergent transcription.
 
     Distance specifies the maximum distance between divergent reads to
     consider a divergent transcription event
@@ -65,9 +67,16 @@ def identify_divergent_transcription(oread_gen, distance=100):
 
         elif (downstream_oread.start - upstream_oread.end <= distance) and \
              (downstream_oread.orientation == '+'):
-            logging.debug("DIV found for reads {0} and {1}".format(upstream_oread,
-                                                                   downstream_oread))
-            
 
-        upstream_oread = downstream_oread
+            if downstream_oread.chro == upstream_oread.chro:
+
+                logging.debug("DIV found for reads {0} and {1}".format(upstream_oread,
+                                                                       downstream_oread))
+
+                yield (upstream_oread.chro,
+                       min(upstream_oread.end, downstream_oread.start),
+                       max(upstream_oread.end, downstream_oread.start))
             
+        upstream_oread = downstream_oread
+
+
