@@ -1,5 +1,5 @@
-* DIVTRANS							   :Muchardt:
-
+* DIVTRANS                                                         :Muchardt:
+  
   We look at the implication of HERV sequences in the reactivation of
   immune related genes.
 
@@ -104,19 +104,38 @@ f
      - [X] Stats on beds
 
 *** TODO [#B] 0.4
-    DEADLINE: <2018-05-25 ven.>
+    DEADLINE: <2018-06-08 ven.>
+    :LOGBOOK:
+    CLOCK: [2018-05-30 mer. 12:32]--[2018-05-30 mer. 17:27] =>  4:55
+    CLOCK: [2018-05-30 mer. 08:26]--[2018-05-30 mer. 11:20] =>  2:54
+    CLOCK: [2018-05-18 ven. 08:23]--[2018-05-18 ven. 17:27] =>  9:04
+    :END:
 
-    1) [X] Check quality of prediction by intersecting divergent
-       transcription beds with CAGE fantom datasets
+    1) [ ] Check quality of prediction by intersecting divergent
+       transcription beds 
 
-    2) [ ] Evaluate + and - transcription on/around divergent
+       - [ ] with CAGE fantom datasets
+
+       - [ ] with transcription factors (from ucsc)
+
+    2) [ ] Use strandness of CAGE data to improve overlap/filtering of
+       divergent transcription intervals
+       
+       ie: Divergent reads should overlap with same strand CAGE data 
+       (can be use also
+
+    3) [ ] Evaluate + and - transcription on/around divergent
        transcription intervals. Might put a threshold on the
        ratio of +/- transcription
 
-    3) [ ] Adjust +/- transcriptuion ratio threshold according to
+       Options
+       - option is to create SAF from beds (add to bed_lib) then
+	featureCounts with stranded 1 and 2
+       - Craw (Bertrand Neron)
+
+    4) [ ] Adjust +/- transcriptuion ratio threshold according to
        quality of prediction using method in 1)
        > by optimizing the jaccard index ?
-
 
 *** TODO [#B] 0.2								     
 
