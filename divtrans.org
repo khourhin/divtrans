@@ -104,27 +104,32 @@ f
      - [X] Stats on beds
 
 *** TODO [#B] 0.4
-    DEADLINE: <2018-06-08 ven.>
+    DEADLINE: <2018-07-13 ven.>
     :LOGBOOK:
+    CLOCK: [2018-07-12 jeu. 12:13]--[2018-07-12 jeu. 16:52] =>  4:39
+    CLOCK: [2018-07-12 jeu. 08:53]--[2018-07-12 jeu. 11:30] =>  2:37
+    CLOCK: [2018-07-11 mer. 09:05]--[2018-07-11 mer. 16:31] =>  7:26
+    CLOCK: [2018-07-10 mar. 09:18]--[2018-07-10 mar. 16:38] =>  7:20
     CLOCK: [2018-05-30 mer. 12:32]--[2018-05-30 mer. 17:27] =>  4:55
     CLOCK: [2018-05-30 mer. 08:26]--[2018-05-30 mer. 11:20] =>  2:54
     CLOCK: [2018-05-18 ven. 08:23]--[2018-05-18 ven. 17:27] =>  9:04
     :END:
 
-    1) [ ] Check quality of prediction by intersecting divergent
+    1) [X] Check quality of prediction by intersecting divergent
        transcription beds 
 
-       - [ ] with CAGE fantom datasets
+       - [X] with CAGE fantom datasets
 
-       - [ ] with transcription factors (from ucsc)
+       - [X] with transcription factors (from ucsc)
 
-    2) [ ] Use strandness of CAGE data to improve overlap/filtering of
+    2) [X] Use strandness of CAGE data to improve overlap/filtering of
        divergent transcription intervals
        
-       ie: Divergent reads should overlap with same strand CAGE data 
-       (can be use also
+       > Select divergent transcription intervals which are
+       overlapping with at least one CAGE peaks and more stringently,
+       two divergent peaks
 
-    3) [ ] Evaluate + and - transcription on/around divergent
+    3) [X] Evaluate + and - transcription on/around divergent
        transcription intervals. Might put a threshold on the
        ratio of +/- transcription
 
