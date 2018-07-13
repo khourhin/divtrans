@@ -129,7 +129,7 @@
        overlapping with at least one CAGE peaks and more stringently,
        two divergent peaks
 
-    3) [ ] Evaluate + and - transcription on/around divergent
+    3) [X] Evaluate + and - transcription on/around divergent
        transcription intervals. Might put a threshold on the
        ratio of +/- transcription
 
