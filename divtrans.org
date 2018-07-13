@@ -72,7 +72,7 @@
      Improvements:
      - [ ] Identify the center of divergent transcription event and
        create shortest interval between divergent reads
-f
+
 *** DONE [#A] 0.2
       CLOSED: [2018-01-12 Fri 12:21] DEADLINE: <2018-01-12 Fri>
 
@@ -129,7 +129,7 @@ f
        overlapping with at least one CAGE peaks and more stringently,
        two divergent peaks
 
-    3) [X] Evaluate + and - transcription on/around divergent
+    3) [ ] Evaluate + and - transcription on/around divergent
        transcription intervals. Might put a threshold on the
        ratio of +/- transcription
 
@@ -138,7 +138,19 @@ f
 	featureCounts with stranded 1 and 2
        - Craw (Bertrand Neron)
 
-    4) [ ] Adjust +/- transcriptuion ratio threshold according to
+    4) [ ] Optimize quantification:
+
+       FeatureCounts appears extremely slow (around 2h for a single strand and 8gb bam)
+
+       > Use featureCounts "repair" beforehand ? Don't know if this
+       will accelerate the processus
+
+       Tried bedtools coverage but doesn't take into account pairs
+       (leading to always similar quantification for + and - strands)
+
+       > Don't think this could be a proper alternative
+
+    5) [ ] Adjust +/- transcriptuion ratio threshold according to
        quality of prediction using method in 1)
        > by optimizing the jaccard index ?
 
