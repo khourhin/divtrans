@@ -88,7 +88,8 @@
      CLOCK: [2018-04-12 jeu. 09:51]--[2018-04-12 jeu. 12:00] =>  2:09
      :END:
 
-     - [X] Provide with the interval in between divergent reads (not the min and max of both fragments)
+     - [X] Provide with the interval in between divergent reads (not
+       the min and max of both fragments)
 
      - [X] Transfer to tars and tesla
 
@@ -106,6 +107,7 @@
 *** TODO [#B] 0.4
     DEADLINE: <2018-07-20 ven.>
     :LOGBOOK:
+    CLOCK: [2018-07-17 mar. 08:51]--[2018-07-17 mar. 09:26] =>  0:35
     CLOCK: [2018-07-13 ven. 09:10]--[2018-07-13 ven. 16:20] =>  7:10
     CLOCK: [2018-07-12 jeu. 12:13]--[2018-07-12 jeu. 16:52] =>  4:39
     CLOCK: [2018-07-12 jeu. 08:53]--[2018-07-12 jeu. 11:30] =>  2:37
