@@ -165,18 +165,21 @@
          defined from intervals (using a complement as blacklist) but
          the interval are apperently merged, leading to not exact
          count based of regions of interest (but n bp regions along the merged intervals)
+
+	 >> Still this can be a sufficiently correct approximation 
 	 
 	 > computeMatrix: No option for strandness
 
 	 - [ ] Building own counting in [[file:~/Programming/pyNextGen/basics_bam.py::def%20count_over_intervals(self,%20bed_file):][bam_basics]]
 
-	 - [ ] Consider coverage instead of counts 
+*** TODO [#B] 0.5
 
-    5) [ ] Adjust +/- transcriptuion ratio threshold according to
+    1) [ ] Adjust +/- transcriptuion ratio threshold according to
        quality of prediction using method in 1)
        > by optimizing the jaccard index ?
 
-*** TODO [#B] 0.2								     
+
+*** TODO [#B] 0.3								     
 
      Checking available solutions (Found in cite:Lilam2014 ):
      
