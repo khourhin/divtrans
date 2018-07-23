@@ -107,6 +107,7 @@
 *** DONE [#B] 0.4
     CLOSED: [2018-07-23 lun. 14:39] DEADLINE: <2018-07-27 ven.>
     :LOGBOOK:
+    CLOCK: [2018-07-23 lun. 9:39]--[2018-07-23 lun. 15:35] =>  5:56
     CLOCK: [2018-07-17 mar. 08:51]--[2018-07-17 mar. 09:26] =>  0:35
     CLOCK: [2018-07-13 ven. 09:10]--[2018-07-13 ven. 16:20] =>  7:10
     CLOCK: [2018-07-12 jeu. 12:13]--[2018-07-12 jeu. 16:52] =>  4:39
@@ -172,14 +173,16 @@
 
 	 - [X] Building own counting in [[file:~/Programming/pyNextGen/basics_bam.py::def%20count_over_intervals(self,%20bed_file):][bam_basics]]
 
-*** TODO [#B] 0.5
+*** TODO [#B] 0.5 [0/2]
 
-    1) [ ] Adjust +/- transcriptuion ratio threshold according to
+    1) [ ] Running notebook on tars on MS Ribominus data from Mikkel
+
+    2) [ ] Adjust +/- transcriptuion ratio threshold according to
        quality of prediction using method in 1)
        > by optimizing the jaccard index ?
 
-
-*** TODO [#B] 0.3								     
+*** CANCELLED [#B] Available solutions								     
+    CLOSED: [2018-07-23 lun. 15:41]
 
      Checking available solutions (Found in cite:Lilam2014 ):
      
