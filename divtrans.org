@@ -104,8 +104,8 @@
 
      - [X] Stats on beds
 
-*** TODO [#B] 0.4
-    DEADLINE: <2018-07-20 ven.>
+*** DONE [#B] 0.4
+    CLOSED: [2018-07-23 lun. 14:39] DEADLINE: <2018-07-27 ven.>
     :LOGBOOK:
     CLOCK: [2018-07-17 mar. 08:51]--[2018-07-17 mar. 09:26] =>  0:35
     CLOCK: [2018-07-13 ven. 09:10]--[2018-07-13 ven. 16:20] =>  7:10
@@ -141,7 +141,7 @@
 	featureCounts with stranded 1 and 2
        - Craw (Bertrand Neron)
 
-    4) [ ] Optimize quantification:
+    4) [X] Optimize quantification:
 
        FeatureCounts appears extremely slow (around 2h for a single strand and 8gb bam)
 
@@ -152,7 +152,7 @@
        > Trying featurecount cluster install (not conda)
        
 
-       - [ ] Alternatives:
+       - [X] Alternatives:
 
 	 - Tried bedtools coverage but doesn't take into account pairs
 	 (leading to always similar quantification for + and - strands)
@@ -170,7 +170,7 @@
 	 
 	 > computeMatrix: No option for strandness
 
-	 - [ ] Building own counting in [[file:~/Programming/pyNextGen/basics_bam.py::def%20count_over_intervals(self,%20bed_file):][bam_basics]]
+	 - [X] Building own counting in [[file:~/Programming/pyNextGen/basics_bam.py::def%20count_over_intervals(self,%20bed_file):][bam_basics]]
 
 *** TODO [#B] 0.5
 
