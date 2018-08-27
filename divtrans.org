@@ -118,7 +118,7 @@
     CLOCK: [2018-05-30 mer. 08:26]--[2018-05-30 mer. 11:20] =>  2:54
     CLOCK: [2018-05-18 ven. 08:23]--[2018-05-18 ven. 17:27] =>  9:04
     :END:
-
+    
     1) [X] Check quality of prediction by intersecting divergent
        transcription beds 
 
@@ -174,7 +174,7 @@
 	 - [X] Building own counting in [[file:~/Programming/pyNextGen/basics_bam.py::def%20count_over_intervals(self,%20bed_file):][bam_basics]]
 
 *** TODO [#B] 0.5 [1/3]                                             :Batsche:
-    DEADLINE: <2018-08-17 ven.>
+    DEADLINE: <2018-08-24 ven.>
     :LOGBOOK:
     CLOCK: [2018-07-23 lun. 15:50]--[2018-07-23 lun. 17:10] =>  1:20
     :END:
@@ -207,13 +207,13 @@
 	 - [X] Alignment on tars
 
 	 - [ ] Lauching divergent transcription
-
+	   
     3) [ ] Adjust +/- transcriptuion ratio threshold according to
        quality of prediction using method in 1)
        > by optimizing the jaccard index ?
 
 *** TODO [#B] 0.6 [0/2]
-    DEADLINE: <2018-08-17 ven.>
+    DEADLINE: <2018-08-24 ven.>
 
     see divtrans_0.6.ipynb
 
