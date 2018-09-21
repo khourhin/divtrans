@@ -174,7 +174,7 @@
 	 - [X] Building own counting in [[file:~/Programming/pyNextGen/basics_bam.py::def%20count_over_intervals(self,%20bed_file):][bam_basics]]
 
 *** TODO [#B] 0.5 [1/3]                                             :Batsche:
-    DEADLINE: <2018-08-24 ven.>
+    DEADLINE: <2018-09-07 ven.>
     :LOGBOOK:
     CLOCK: [2018-07-23 lun. 15:50]--[2018-07-23 lun. 17:10] =>  1:20
     :END:
@@ -213,7 +213,7 @@
        > by optimizing the jaccard index ?
 
 *** TODO [#B] 0.6 [0/2]
-    DEADLINE: <2018-08-24 ven.>
+    DEADLINE: <2018-09-07 ven.>
 
     see divtrans_0.6.ipynb
 
