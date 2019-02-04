@@ -173,8 +173,8 @@
 
 	 - [X] Building own counting in [[file:~/Programming/pyNextGen/basics_bam.py::def%20count_over_intervals(self,%20bed_file):][bam_basics]]
 
-*** TODO [#B] 0.5 [1/3]                                             :Batsche:
-    DEADLINE: <2018-09-07 ven.>
+*** CANCELLED [#B] 0.5 [1/3]                                        :Batsche:
+    CLOSED: [2019-02-04 lun. 09:53]
     :LOGBOOK:
     CLOCK: [2018-07-23 lun. 15:50]--[2018-07-23 lun. 17:10] =>  1:20
     :END:
@@ -212,8 +212,8 @@
        quality of prediction using method in 1)
        > by optimizing the jaccard index ?
 
-*** TODO [#B] 0.6 [0/2]
-    DEADLINE: <2018-09-07 ven.>
+*** CANCELLED [#B] 0.6 [0/2]
+    CLOSED: [2019-02-04 lun. 09:53]
 
     see divtrans_0.6.ipynb
 
@@ -229,7 +229,6 @@
     these differents intervals
 
     - [ ] detecting events only on these intervals (using the bam.multi_fetch)
-
 
 *** CANCELLED [#B] Available solutions								     
     CLOSED: [2018-07-23 lun. 15:41]
@@ -247,8 +246,23 @@
        totalRNA dataset
 
 *** TODO 1.0
+    SCHEDULED: <2019-02-28 jeu.>
 
-    - [ ] Make a user friendly interface
+    Part of the log for divtrans project has been lost. This is an
+    attempt to restore his actual stage the <2019-02-04 lun.>
+
+    - [X] CookieCutter trials for deployment + Pypi
+
+    - [X] Coordinated sorted Bam version
+
+    - [ ] Filter by counts
+      
+      > So far the counts are a simplified estimation (only
+      considering the 2nd of the pair for counts)
+
+    - [ ] Launch old version on MS data on tars
+
+    - [ ] Make a usable version for Epigen
             
 ** Current workflow
 ** Data
