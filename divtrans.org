@@ -255,14 +255,22 @@
 
     - [X] Coordinated sorted Bam version
 
-    - [ ] Filter by counts
+    - [X] Filter by counts
       
       > So far the counts are a simplified estimation (only
       considering the 2nd of the pair for counts)
 
-    - [ ] Launch old version on MS data on tars
+    - [X] Launch old version on MS data on tars
+
+    - [X] Give divtrans interval data to CM
+
+      > The results were obtained with pynextgen 0.1.1
 
     - [ ] Make a usable version for Epigen
+
+      > Experimenting with docker image
+
+      > Now logging in [[file:~/Programming/pynextgen/improvements.org::*PyNextGen][PyNextGen]]
             
 ** Current workflow
 ** Data
