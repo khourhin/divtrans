@@ -245,8 +245,8 @@
        Designed for GRO-seq but might be of use with our
        totalRNA dataset
 
-*** TODO 1.0
-    SCHEDULED: <2019-02-28 jeu.>
+*** DONE 1.0
+    CLOSED: [2019-03-09 Sat 22:36] SCHEDULED: <2019-02-28 jeu.>
 
     Part of the log for divtrans project has been lost. This is an
     attempt to restore his actual stage the <2019-02-04 lun.>
@@ -266,12 +266,27 @@
 
       > The results were obtained with pynextgen 0.1.1
 
-    - [ ] Make a usable version for Epigen
+    - [X] Make a usable version for Epigen
+
+      > Good option (after BB and HM discussion) would be bioconda
+      which automatically generate biocontainers
 
       > Experimenting with docker image
 
-      > Now logging in [[file:~/Programming/pynextgen/improvements.org::*PyNextGen][PyNextGen]]
-            
+      - Are python Pool threads OK in docker containers ?
+
+*** TODO 2.0
+
+    - [ ] Test on Rachez's dataset
+    
+    - [ ] Bioconda recipe
+
+      >> Can experiment first with my own khourhin account on anaconda.
+
+    - [ ] Biocontainer
+
+    - [ ] Own Docker image ?
+
 ** Current workflow
 ** Data
 *** Ribominus data
