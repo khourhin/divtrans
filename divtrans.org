@@ -276,15 +276,19 @@
       - Are python Pool threads OK in docker containers ?
 
 *** TODO 2.0
+    SCHEDULED: <2019-03-31 Sun>
 
-    - [ ] Test on Rachez's dataset
-    
+    - [X] Test on Rachez's dataset
+      
+    - [X] Build a framework for easy parameter testing (Bedfilter and Bedfilter.multiple_run()):
+      See [[file:code/divtrans_rachez_dataset.ipynb]]
+
     - [ ] Bioconda recipe
 
       >> Can experiment first with my own khourhin account on anaconda.
 
     - [ ] Biocontainer
-
+      
     - [ ] Own Docker image ?
 
 ** Current workflow
