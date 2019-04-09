@@ -291,6 +291,19 @@
       
     - [ ] Own Docker image ?
 
+    - [ ] Check with Mikkels's data, evaluate the overlap with cage seq
+      in increasing intervals (check the curve of overlap to estimate
+      the distance with divtrans events)
+
+      > See [[file:~/hub/muchardt/ms_enh/code/divtrans_detection.ipynb]]
+
+    - [ ] Develop a score more than a hard threshold ?
+
+Parameter tuning: distance = 200, ratio=0.95-0.90 (to account for
+strand specific error rate, 1% according to
+https://academic.oup.com/nar/article/37/18/e123/1085684)
+
+
 ** Current workflow
 ** Data
 *** Ribominus data

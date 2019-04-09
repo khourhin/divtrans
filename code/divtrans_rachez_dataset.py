@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.3'
-#       jupytext_version: 1.0.4
+#       jupytext_version: 1.0.5
 #   kernelspec:
 #     display_name: Python [conda env:classic]
 #     language: python
@@ -46,6 +46,7 @@ chro_sizes = "../data/rachez_test_data/mm9.genome"
 # Bam files:
 
 bams = glob.glob("../data/rachez_test_data/*.bam")
+bams
 
 # Subset test bam:
 
@@ -53,6 +54,14 @@ subset_bam = Bam(bams[0]).multi_fetch(["chr1:0-249250621"], bam_out="test.bam")
 
 
 subset_bam
+
+# ## Generate bigwigs
+
+# + {"language": "bash"}
+#
+# bamCoverage --bam test.bam  --filterRNAstrand forward -o test_forward.bw --region chr1:0:249250621
+# bamCoverage --bam test.bam  --filterRNAstrand reverse -o test_reverse.bw --region chr1:0:249250621
+# -
 
 # ## Divergent transcription detection (test dataset)
 
@@ -78,9 +87,13 @@ bedfilter.multiple_run(
 )
 
 # ## Compare with K27Ac peaks
+#
+# Using bed file with quality filtered peaks (select)
+#
+# Rep2 was empty after quality filtering (apparently all peaks called before were noise)
 
 ref_bed = Bed(
-    "../data/rachez_test_data/H3K27ac_Rep1_vs_INPUT-Mouse_Rep1_peaks.narrowPeak"
+    "../data/rachez_test_data/H3K27ac_vs_INPUT-Mouse_Rep1_select_sort.narrowPeak"
 ).filter_by_chromosome("chr1")
 
 # ### Statistics for parameter tuning:
@@ -103,6 +116,10 @@ ref_bed = Bed(
 #
 # Source:
 # https://en.wikipedia.org/wiki/Receiver_operating_characteristic
+
+test_analysis.bed
+
+divtrans_beds = list(bedfilter.filtered_beds.values()).append(test_analysis.bed)
 
 # +
 jaccard_df = pd.concat(
@@ -152,7 +169,7 @@ sum_df.index = sum_df.index.str.replace("test_divtrans_", "")
 sum_df.index = sum_df.index.str.replace("_counts_filtered", "")
 # -
 
-sum_df.head()
+sum_df.sort_values('true_positive_rate', ascending=False).head()
 
 sns.pairplot(
     x_vars="false_positive_rate",
