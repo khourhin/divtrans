@@ -299,6 +299,8 @@
 
     - [ ] Develop a score more than a hard threshold ?
 
+    - [ ] Use methylome6 (badeg) plot to get coverage over intervals ?
+
 Parameter tuning: distance = 200, ratio=0.95-0.90 (to account for
 strand specific error rate, 1% according to
 https://academic.oup.com/nar/article/37/18/e123/1085684)
