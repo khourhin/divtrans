@@ -63,7 +63,7 @@
  modified by the disease.
 
 ** Divergent transcription identification
-*** DONE [#A] 0.1
+*** DONE [#A] 0.0.1
       CLOSED: [2018-01-10 Wed 16:13]
      Using divtrans pipeline
 
@@ -73,14 +73,14 @@
      - [ ] Identify the center of divergent transcription event and
        create shortest interval between divergent reads
 
-*** DONE [#A] 0.2
+*** DONE [#A] 0.0.2
       CLOSED: [2018-01-12 Fri 12:21] DEADLINE: <2018-01-12 Fri>
 
       - [X] Verify that overlapping read pairs are considered
 
       - [X] Add all sites of divergent transcription (ie overlapping reads)
 
-*** DONE [#B] 0.3
+*** DONE [#B] 0.0.3
     CLOSED: [2018-05-18 ven. 10:37] DEADLINE: <2018-05-18 ven.>
      :LOGBOOK:
      CLOCK: [2018-05-02 mer. 11:26]--[2018-05-02 mer. 13:19] =>  1:53
@@ -104,7 +104,7 @@
 
      - [X] Stats on beds
 
-*** DONE [#B] 0.4
+*** DONE [#B] 0.0.4
     CLOSED: [2018-07-23 lun. 14:39] DEADLINE: <2018-07-27 ven.>
     :LOGBOOK:
     CLOCK: [2018-07-23 lun. 9:39]--[2018-07-23 lun. 15:35] =>  5:56
@@ -173,7 +173,7 @@
 
 	 - [X] Building own counting in [[file:~/Programming/pyNextGen/basics_bam.py::def%20count_over_intervals(self,%20bed_file):][bam_basics]]
 
-*** CANCELLED [#B] 0.5 [1/3]                                        :Batsche:
+*** CANCELLED [#B] 0.0.5 [1/3]                                      :Batsche:
     CLOSED: [2019-02-04 lun. 09:53]
     :LOGBOOK:
     CLOCK: [2018-07-23 lun. 15:50]--[2018-07-23 lun. 17:10] =>  1:20
@@ -212,7 +212,7 @@
        quality of prediction using method in 1)
        > by optimizing the jaccard index ?
 
-*** CANCELLED [#B] 0.6 [0/2]
+*** CANCELLED [#B] 0.0.6 [0/2]
     CLOSED: [2019-02-04 lun. 09:53]
 
     see divtrans_0.6.ipynb
@@ -245,7 +245,7 @@
        Designed for GRO-seq but might be of use with our
        totalRNA dataset
 
-*** DONE 1.0
+*** DONE 0.1
     CLOSED: [2019-03-09 Sat 22:36] SCHEDULED: <2019-02-28 jeu.>
 
     Part of the log for divtrans project has been lost. This is an
@@ -275,7 +275,7 @@
 
       - Are python Pool threads OK in docker containers ?
 
-*** TODO 2.0
+*** TODO [#B] 0.2 [5/9]
     SCHEDULED: <2019-03-31 Sun>
 
     - [X] Test on Rachez's dataset
@@ -283,28 +283,63 @@
     - [X] Build a framework for easy parameter testing (Bedfilter and Bedfilter.multiple_run()):
       See [[file:code/divtrans_rachez_dataset.ipynb]]
 
-    - [ ] Bioconda recipe
+    - [X] Conda recipe
 
       >> Can experiment first with my own khourhin account on anaconda.
 
-    - [ ] Biocontainer
-      
-    - [ ] Own Docker image ?
+      Build pynextgen recipe from pypi
 
-    - [ ] Check with Mikkels's data, evaluate the overlap with cage seq
+      conda skeleton pypi pynextgen
+
+      >>> This complained about pybiomart so I created the pybiomart recipe
+
+      conda skeleton pybiomart
+
+      conda build pynextgen/meta.yaml
+
+      conda build pybiomart/meta.yaml
+
+      anaconda login
+
+      anaconda upload ~/programs/miniconda3/envs/classic/conda-bld/linux-64/pynextgen-0.1.4-py36_0.tar.bz2
+      # + same for pybiomart
+
+      Now pynextgen can be install from my anaconda channel's
+
+      conda create -n divtrans -c khourhin pynextgen
+
+      Left is to submit both to bioconda
+
+    - [X] Check with Mikkels's data, evaluate the overlap with cage seq
       in increasing intervals (check the curve of overlap to estimate
       the distance with divtrans events)
 
       > See [[file:~/hub/muchardt/ms_enh/code/divtrans_detection.ipynb]]
 
+    - [X] Improve bedfilter to have persistent count tables
+
     - [ ] Develop a score more than a hard threshold ?
+      
+    - [ ] Counts for DR of enhancers proposition:
+
+      The idea is to use the background on the other side to correct for
+      expression which is not due to the enhancer (due to overlapping gene for example)
+
+      ie: upstream_minus_count = upstream_minus_count - downstream_minus_count
+      (if they are comparable, ie in the gene body)
 
     - [ ] Use methylome6 (badeg) plot to get coverage over intervals ?
+      
+    - [ ] Logging: verify that log is active (at least in stdout or common.log)
+      when using divergent_transcription script
 
-Parameter tuning: distance = 200, ratio=0.95-0.90 (to account for
+Parameter tuning: distance = 200, ratio=0.05-0.10 (to account for
 strand specific error rate, 1% according to
 https://academic.oup.com/nar/article/37/18/e123/1085684)
 
+*** TODO 0.3
+
+    - [ ] Bioconda recipe, Biocontainer and Docker image ?
 
 ** Current workflow
 ** Data
