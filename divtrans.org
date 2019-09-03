@@ -341,6 +341,10 @@ https://academic.oup.com/nar/article/37/18/e123/1085684)
 
     - [ ] Bioconda recipe, Biocontainer and Docker image ?
 
+** TODO Meeting 
+
+<2019-09-06 Fri 10:00>
+
 ** Current workflow
 ** Data
 *** Ribominus data
