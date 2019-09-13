@@ -1,4 +1,4 @@
-* DIVTRANS                                                         :Muchardt:
+* DIVTRANS                                                         :muchardt:
   
   We look at the implication of HERV sequences in the reactivation of
   immune related genes.
@@ -309,7 +309,7 @@
       conda create -n divtrans -c khourhin pynextgen
 
       Left is to submit both to bioconda
-
+      
     - [X] Check with Mikkels's data, evaluate the overlap with cage seq
       in increasing intervals (check the curve of overlap to estimate
       the distance with divtrans events)
@@ -317,11 +317,15 @@
       > See [[file:~/hub/muchardt/ms_enh/code/divtrans_detection.ipynb]]
 
     - [X] Improve bedfilter to have persistent count tables
+      
+    - [CANCELED] Develop a score more than a hard threshold ?
 
-    - [ ] Develop a score more than a hard threshold ?
+      > No more idea of developping a de novo discovery of enhancer
+      intervals. If so, to check with Bertrand Neron to see if CRAW could be
+      added a feature to deal with paired data.
       
     - [ ] Counts for DR of enhancers proposition:
-
+      
       The idea is to use the background on the other side to correct for
       expression which is not due to the enhancer (due to overlapping gene for example)
 
@@ -341,9 +345,19 @@ https://academic.oup.com/nar/article/37/18/e123/1085684)
 
     - [ ] Bioconda recipe, Biocontainer and Docker image ?
 
-** TODO Meeting 
+** DONE Meeting 
+   CLOSED: [2019-09-06 Fri 11:11]
 
 <2019-09-06 Fri 10:00>
+
+*** Summary
+
+- Refactoring of pynextgen (easyer filtering to be able to perform multiple tests) + doc
+- Distance with Cage intervals ? 
+  - ms_enh/divtrans_detection
+- This is a full time job and we've got 1/3 months left
+
+- Cannot not properly tune the program if there is no control (CR data not sufficient?)
 
 ** Current workflow
 ** Data
