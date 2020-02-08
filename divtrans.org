@@ -326,8 +326,8 @@
 
     - [X] Incorporate DESEQ2 test on divtrans counts
       
-*** TODO [#B] 0.3 [0/3]
-    SCHEDULED: <2019-10-15 Tue>
+*** POSTPONED [#B] 0.3 [0/3]
+    CLOSED: [2020-02-06 Thu 11:53] SCHEDULED: <2019-10-15 Tue>
 
     - [ ] Counts for DR of enhancers proposition:
       
